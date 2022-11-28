@@ -13,14 +13,17 @@ function Home() {
   }
 
   return (
-    <div className="container">
+    <div className="container row">
       <div className="wrapper">
+        {/* Image Wrapper  */}
         <div className="img">
           <img
             src="https://cdn.telanganatoday.com/wp-content/uploads/2021/11/Google-Hyderabad-is-looking-to-hire-for-multiple-roles.jpg"
             alt=""
           />
         </div>
+
+        {/* TextField  */}
         <div className="textfields">
           <p className="title">Sign in</p>
           <p>Use your Google Account</p>
@@ -39,9 +42,11 @@ function Home() {
           </p>
           <p>Not your computer? Use Guest mode to sign in privately</p>
         </div>
+
+        {/* Bottom Button  */}
         <div className="bottom-section">
-          <a href="#">Create Account</a>
-          <button className="next-btn" onClick={handleclickbtn}>
+          <a href="Create">Create Account</a>
+          <button className="next-btn" type="submit">
             Next
           </button>
         </div>
