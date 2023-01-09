@@ -1,37 +1,21 @@
+import React from "react";
 import "../Home/Home.css";
-import "./Password.css";
 
 function Password(props) {
+  console.log(props.email);
+
   return (
-    <div className="container">
-      <div className="wrapper">
-        {/* Image Wrapper  */}
-        <div className="img">
-          <img
-            src="https://cdn.telanganatoday.com/wp-content/uploads/2021/11/Google-Hyderabad-is-looking-to-hire-for-multiple-roles.jpg"
-            alt=""
-          />
+    <div className="Wrapper">
+      <form>
+        <div className="mb-3">
+          <p className="from-label">{props.email}</p>
+          <label className="form-label">Password</label>
+          <input type="password" className="form-control" />
         </div>
-
-        {/* TextField  */}
-        <div className="textfields">
-          <p className="title">Welcome</p>
-          <p className="user"></p>
-          <input type="password" placeholder="Enter your Password" required />
-          <div className="checkbox">
-            <input type="checkbox" className="input-check" />
-            <p className="showpwd">Show Password</p>
-          </div>
-        </div>
-
-        {/* Bottom Button  */}
-        <div className="bottom-section">
-          <a href="#">Forgot email?</a>
-          <button className="next-btn">
-            <a href="">Next</a>
-          </button>
-        </div>
-      </div>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
