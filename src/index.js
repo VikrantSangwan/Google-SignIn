@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./components/Home/Home";
 import Password from "./components/Password/Password";
@@ -12,7 +11,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/pwd" element={<Password />}></Route>
+        <Route path="/pwd/:email" element={<Password />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
