@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router";
-import "../Home/Home.css";
+import "./Password.css";
 
 function Password() {
   let { email } = useParams();
@@ -9,14 +9,37 @@ function Password() {
   return (
     <div className="Wrapper">
       <form>
-        <div className="mb-3">
-          <p className="from-label">{email}</p>
-          <label className="form-label">Password</label>
-          <input type="password" className="form-control" />
+        <div className="maincontainer">
+          <div className="imgcontainer">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+              alt=""
+            />
+          </div>
+          <div className="desccontainer">
+            <p>Welcome</p>
+            <p>{email}</p>
+          </div>
+          <div className="emailinput">
+            <p className="enterpass">Enter your password</p>
+            <input
+              type="password"
+              className="form-control email"
+              placeholder="Password"
+            />
+          </div>
+
+          <div className="submitbtn">
+            <p>Forgot password?</p>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            >
+              Next
+            </button>
+          </div>
         </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
       </form>
     </div>
   );
